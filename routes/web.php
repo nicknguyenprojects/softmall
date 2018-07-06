@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route controller
+Route::resource('Company', 'CompanyController');
+Route::resource('Country', 'CountryController');
+
+
+// Test some route
+Route::get('/san-pham/{name}/{id}', function($name,$id)
+{
+	echo 'Bạn đang xem sản phẩm '.$name.' có ID= '.$id;
+});

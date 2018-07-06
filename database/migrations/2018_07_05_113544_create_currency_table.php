@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCatelogsTable extends Migration
+class CreateCurrencyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateCatelogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('catelogs', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->bigInteger('parent_id');
-            $table->smallInteger('order');
-            $table->tinyInteger('status');
-            $table->text('info')->nullable();
+        Schema::create('currency', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ class CreateCatelogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('catelogs');
+        Schema::dropIfExists('currencies');
     }
 }
