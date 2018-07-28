@@ -32,7 +32,6 @@ class CreateProductTable extends Migration
             $table->bigInteger('view');
             $table->tinyInteger('rate');
             $table->bigInteger('status');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

@@ -21,12 +21,13 @@ class CreateUserTable extends Migration
             $table->string('email')->unique();
             $table->text('address')->nullable();
             $table->string('birthday')->nullable();
+            $table->string('gender')->nullable();
             $table->string('password');
             $table->tinyInteger('status');
             $table->tinyInteger('account_type');
             $table->bigInteger('company_id');
+            $table->timestamps();
             $table->rememberToken();
-            $table->timestamps('');
         });
     }
 
